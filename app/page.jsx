@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 // components
 import Social from "@/components/Social";
@@ -15,7 +16,7 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Software Developer</span>
             <h1 className="h1">
-              Hello I<span className="text-accent">'</span>m <br />{" "}
+              Hello I<span className="text-accent">&apos;</span>m <br />{" "}
               <span>
                 Salman
                 <span className="text-accent text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
