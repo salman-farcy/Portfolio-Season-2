@@ -4,6 +4,7 @@ import { FiDownload } from "react-icons/fi";
 // components
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Software Developer</span>
             <h1 className="h1">
-              Hello I'm <br />{" "}
+              Hello I<span className="text-accent">'</span>m <br />{" "}
               <span>
                 Salman
                 <span className="text-accent text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
@@ -56,7 +57,7 @@ const Home = () => {
         </div>
       </div>
 
-      
+      <Stats />
     </section>
   );
 };
