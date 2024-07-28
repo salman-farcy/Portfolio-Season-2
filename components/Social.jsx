@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaFacebook, FaTwitter } from "react-icons/fa";
 
@@ -13,7 +14,7 @@ const Social = ({ containerStyles, iconStyles }) => {
     <div className={containerStyles}>
       {socials.map((item, index) => {
         return (
-          <Link key={index} href={item.path} className={iconStyles}>
+          <Link key={index} href={item.path} target="_blank" className={iconStyles}>
             {item.icon}
           </Link>
         );

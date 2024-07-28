@@ -36,7 +36,7 @@ const services = [
 ];
 const Services = () => {
   return (
-    <section className="min-h[80vh] flex flex-col justify-center py-12 xl:py-0">
+    <section className="min-h-[80vh] justify-center flex flex-col  py-12 xl:py-0">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -56,6 +56,7 @@ const Services = () => {
                   <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
                   </div>
+                  
                   <Link href={service.href} className="w-[45px] h-[45px]  rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                     <BsArrowDownRight className="text-primary text-2xl" />
                   </Link>

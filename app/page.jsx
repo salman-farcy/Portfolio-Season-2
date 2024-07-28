@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
-import { motion } from "framer-motion";
+
 
 // components
 import Social from "@/components/Social";
@@ -12,6 +12,7 @@ const Home = () => {
     <section className="h-full">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+          
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Software Developer</span>
@@ -31,7 +32,6 @@ const Home = () => {
             </p>
 
             {/* btn */}
-
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
                 variant="outline"
@@ -55,9 +55,9 @@ const Home = () => {
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
+
         </div>
       </div>
-
       <Stats />
     </section>
   );

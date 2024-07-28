@@ -20,8 +20,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMons)",
-
+      primary: "var(--font-jetbrainsMons)"
     },
     extend: {
       colors: {
