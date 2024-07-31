@@ -30,12 +30,12 @@ const about = {
       fieldVale: "3+ Years",
     },
     {
-      fieldName: "Nationality",
-      fieldVale: "Bangladesh",
-    },
-    {
       fieldName: "Email",
       fieldVale: "salmanfarcy253@gmail.com",
+    },
+    {
+      fieldName: "Nationality",
+      fieldVale: "Bangladesh",
     },
     {
       fieldName: "Freelance",
@@ -201,7 +201,6 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
-
 const Resume = () => {
   return (
     <motion.div
@@ -215,10 +214,10 @@ const Resume = () => {
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-[60px]"
+          className="flex flex-col xl:flex-row gap-8 xl:gap-14"
         >
           {/* tabs */}
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <TabsList className="flex  flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Expreience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -231,7 +230,7 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-8 text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="mx-w-[600px] text-white/60 max-auto xl:mx-0">
+                <p className="mx-w-[600px] text-white/60 max-auto xl:mx-0 text-justify">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px] ">
@@ -264,7 +263,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-8 text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="mx-w-[600px] text-white/60 max-auto xl:mx-0">
+                <p className="mx-w-[600px] text-white/60 max-auto xl:mx-0 text-justify">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -303,7 +302,7 @@ const Resume = () => {
                   </p>
                 </div>
 
-                <ScrollArea className="h-[350px]">
+                <ScrollArea className="h-[344px] xl:h-[350px]">
                   <ul className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 xl:gap-8 ">
                     {skills.skillList.map((skill, index) => {
                       return (
@@ -311,7 +310,11 @@ const Resume = () => {
                           <TooltipProvider delayDuration={100}>
                             <Tooltip>
                               <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex  justify-center items-center group">
-                                <Link href={skill.href} target="_blank" className="flex flex-col items-center justify-center gap-2">
+                                <Link
+                                  href={skill.href}
+                                  target="_blank"
+                                  className="flex flex-col items-center justify-center gap-2"
+                                >
                                   <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                     {skill.icon}
                                   </div>
@@ -336,8 +339,27 @@ const Resume = () => {
             </TabsContent>
 
             {/* about */}
-            <TabsContent value="about" className="w-full">
-              about
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-8">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
+                  {about.description}
+                </p>
+
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-6  max-w-[620px]">
+                  {about.Info.map((item, index) => {
+                    return (
+                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                        <span className="text-white/60">{item.fieldName}:</span>
+                        <span>{item.fieldVale}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
