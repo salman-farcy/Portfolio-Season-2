@@ -1,5 +1,5 @@
 "use client";
-import { Info } from "lucide-react";
+// import { Info } from "lucide-react";
 import Link from "next/link";
 import {
   FaHtml5,
@@ -88,7 +88,7 @@ const experience = {
   ],
 };
 
-//exprience data
+//education data
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
