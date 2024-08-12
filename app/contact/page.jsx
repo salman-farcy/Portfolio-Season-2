@@ -45,15 +45,21 @@ const Contact = () => {
       className="py-6"
     >
       <div className="container mx-auto">
-        <div className="">
+        <div className="flex flex-col xl:flex-row gap-8">
           {/* form */}
-          <div className="">
-            <form>form</form>
+          <div className="xl:-[54%] order-2 xl:order-none">
+            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+              <h3 className="text-4xl text-accent">Let's work together</h3>
+              <p className="text-white/60">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, accusamus.</p>
+            </form>
           </div>
 
           {/* info */}
-          <div className="">
-            info
+          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
+           <Input type="firstname" placeholder="First Name"/>
+           <Input type="lastname" placeholder="Last Name"/>
+           <Input type="email" placeholder="Email address"/>
+           <Input type="phone" placeholder="Phone Number"/>
           </div>
         </div>
       </div>
